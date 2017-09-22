@@ -1,0 +1,31 @@
+<script>
+
+	function hide(obj, trigger) {
+
+    var element = document.getElementById(obj);
+
+    	statuscode = null;
+    var statusclick = document.getElementById(trigger);
+    statusclick.onclick = '';
+
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+
+}
+
+
+</script><% if (locals.statuscode) { %>
+<div id="status" class="bg-<%= statuscode %>">
+<a id="statusclick" style="display: block;" href="#" onclick="hide('status', 'statusclick')">
+<p><%= statusmessage %></p>
+</a>
+</div>
+<% } %>

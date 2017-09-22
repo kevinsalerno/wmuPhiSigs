@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/08/15
+* Date completed: 10/22/15
+*************************************
+* Program Explanation
+* This page is meant for the gallery, but still contains the 'shell' that was designed for the first page.
+*************************************
+-->
+
+<!-- the header block, which contains our links to our style sheet and favicon -->
+<head>
+	<title>
+		History - Phi Sigma Kappa Chi Tetarton
+	</title>
+		<!-- a favicon to display in the tab -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="Lab2ksalern4336.css" type="text/css" rel="stylesheet">
+</head>
+
+<!-- the body of the document. everything can be found in here -->
+<body>
+	<div class="wrapper">
+	
+<!-- header div, contains the logo as a background -->
+	<header>
+	<!-- <img class="logo" src="crest.png"> -->
+	
+	<div class="letters" id="top">
+	<h1>&#934;  &#931;  &#922;</h1>
+	<h2>Phi Sigma Kappa<br>Western Michigan University</h2>
+	</div>
+
+	
+	<!-- this didn't have to be in it's own div, but due to how it was set up before it stayed this way. -->
+	
+	<!--	
+	<div class="banner">
+	<h1>Phi Sigma Kappa</h1>
+	<h2>Chi Tetarton - Western Michigan University</h2>
+	</div>
+		-->
+		
+	</header>
+	
+	
+	<!-- the main nav. contains links to other parts of website -->
+	<nav>
+		<ul>
+			<li>
+			<a href="Lab2ksalern4336Home.html">Home</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Brothers.html">Brothers</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336History.html">History</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Join.html">Join</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Contact.html">Contact</a>
+			</li>
+			
+			<li>
+			<a href="lab3.pdf"  target="_blank">Lab Requirements</a>			
+			</li>		
+		</ul>
+	</nav>
+	
+	<div class="widget side login">
+	<h1>Login</h1>
+	<form action="test.asp">
+	<input type="text" name="user" placeholder="Username">
+	<input type="password" name="pass" placeholder="Password">
+	<input type="submit" value="Sign In">
+	</form>
+	</div>
+	
+	<div class="widget side">
+	<h1>Social Media</h1>
+		<table class="social-media">
+			<tr>
+				<td>
+				
+				<a href="https://instagram.com/wmuphisigs/">
+				<img class="social-icon"  src="instagram.png" alt="instagram">
+				</a>
+				<a href="https://www.facebook.com/wmuPhiSigs">
+				<img class="social-icon" src="facebook.png" alt="facebook">
+				</a>
+				<a href="https://twitter.com/PhiSigsWMU">
+				<img class="social-icon" src="twitter.png" alt="twitter">
+				</a>
+		
+				</td>		
+				<!--	
+				<td>
+				
+				
+				<img class="social-icon" src="facebook.png">
+				
+				</td>
+				-->
+			</tr>
+			
+			<tr>
+			<td class="twitter">
+			
+	<a class="twitter-timeline" href="https://twitter.com/PhiSigsWMU" data-widget-id="657278533606227969">Tweets by @PhiSigsWMU</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
+			
+
+			
+			</td>
+			</tr>		
+		</table>
+	</div>
+
+
+
+	
+	<!--
+	<div class="side-nav">
+			<ul>
+			<li>
+			<a href="Lab2ksalern4336Primary.html">Primary Page</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Secondary.html">Secondary Page</a>
+			</li>
+			
+			<li>
+			<a href="lab2.pdf">Lab Requirements</a>			
+			</li>		
+		</ul>
+		
+	</div>
+	-->
+	
+	
+	<div class="content">
+	
+	<!-- a div with a class to select our gallery widget -->
+	<div class="widget">
+		<h1>Become a Phi Sig</h1>
+		<!-- a table to show gallery images in a grid -->
+		<p>Put here</p>
+	</div>
+
+
+
+	
+
+	
+	</div>
+
+	
+	<footer>
+		<p>
+			<span class="footnav">
+			<a href="#top">Top</a> |
+			<a href="Lab2ksalern4336Secondary.html">Contact</a> |
+			<a href="Lab2ksalern4336.css">Alumni</a>
+			</span>
+		<br>
+		Copyright &copy; Phi Sigma Kappa Fraternity		
+		<br>
+		Kevin Salerno
+		<br>
+		All Rights Reserved
+		</p>
+	</footer>
+
+	</div>
+</body>
+
+
+
+</html>

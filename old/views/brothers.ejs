@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/08/15
+* Date completed: 10/22/15
+*************************************
+* Program Explanation
+* This is the first HTML page for the lab. I used my Fraternity chapter due to us needing one, this
+* will be the home page with our calendar, events, and any news.
+*************************************
+-->
+
+<!-- the header block, which contains our links to our style sheet and favicon -->
+<head>
+    <% include partials/head %>
+</head>
+
+<!-- the body of the document. everything can be found in here -->
+<body>
+
+	<!-- our wrapper contains everything we want minus the body for background -->
+	<div class="wrapper container-fluid center-block">
+	
+	<!-- header div, contains the logo as a background -->
+		<div class="row">
+					<div class="col-md-12">
+	<header>
+		<% include partials/header %>
+	</header>
+</div>
+</div>
+
+				<div class="row container-fluid">
+	
+	<!-- a wrapper of sorts for our content after all floating side divs are positioned -->
+	<div class="content">
+
+	<div class="col-md-9 col-md-push-3">
+	<!-- a div with a class to select our gallery widget -->
+	<div class="widget">
+		<h1>Our Brothers</h1>
+		<!-- c -->
+		<p>Put here</p>
+	</div>
+
+</div>
+
+
+<div class="col-md-3 sideleft col-md-pull-9">
+
+	<!-- the main nav. contains links to other parts of website -->
+	<nav>
+		<% include partials/nav %>
+	</nav>
+
+
+	<!-- the login box on left. only for looks currently -->
+	<div class="widget side login">
+		<% include partials/login %>
+	</div>
+	
+		
+	<!-- social media side div -->
+	<div class="widget side social">
+		<% include partials/socialmedia %>
+	</div>
+</div>
+	</div>
+</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+	<!-- our footer element, to be displayed at the bottom of every page -->
+	<footer>
+		<% include partials/footer %>
+	</footer>
+</div>
+</div>
+
+	<% include partials/bootstrap %>
+</body>
+
+
+
+</html>

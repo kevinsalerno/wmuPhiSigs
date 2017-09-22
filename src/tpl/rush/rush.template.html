@@ -1,0 +1,55 @@
+
+
+
+<style>
+	p, h2, h3, ul, li, button, img{
+		text-align: center;
+	}
+
+	.btn-social{
+		width: 60%;
+	}
+	li{
+		margin: 0 auto;
+		width: 90%;
+	}
+	.profile-image, .btn-block{
+		margin: 0 auto;
+	}
+</style>
+
+
+<div class="widget">
+{{#if _id}}
+<h3>Congratulations {{firstname}}</h3>
+<img src="{{facebook.photo}}" class="img-responsive img-rounded profile-image">
+<p>You've taken your first step towards brotherhood. Someone from our chapter will reach out to you within the next 24 hours. We look forward to meeting you Mr. {{lastname}}.</p>
+
+{{else}}
+<h2>Rush &#934;  &#931;  &#922;</h2>
+<p><i>Interested in becoming a part of a brotherhood for life? Request more information today.</i></p>
+  <button class="btn btn-block btn-social btn-facebook" onclick="window.activeSession.login();">
+    <span class="fa fa-facebook"></span> Sign in with Facebook
+  </button>
+  <br>
+{{/if}}
+</div>
+
+<!--	fuck this button
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true" onlogin="window.activeSession.updateLoginStatus();"></div>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+-->
+
+<div id="status">
+</div>
+
+
+
+
+

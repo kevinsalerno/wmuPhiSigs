@@ -1,0 +1,35 @@
+{
+  "name": "wmuphisigs",
+  "version": "1.0.0",
+  "description": "wmu phi sigs app",
+  "main": "build.js",
+  "dependencies": {
+    "backbone": "^1.3.2",
+    "backbone.marionette": "^2.4.5",
+    "cssify": "^1.0.2",
+    "jquery": "^2.2.2",
+    "browserify-handlebars": "^1.0.0",
+    "handlebars": "^4.0.5",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Salerno",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "cssify",
+      "browserify-handlebars"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinWMU/wmuPhiSigs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KevinWMU/wmuPhiSigs/issues"
+  },
+  "homepage": "https://github.com/KevinWMU/wmuPhiSigs#readme"
+}

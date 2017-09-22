@@ -1,0 +1,23 @@
+<h1>Login</h1>
+
+	<!-- a form, which executes a test.asp when submitted -->
+<form name="login" id="formlogin" method="post" action="/login">
+	<!-- input boxes, which have placeholders to display 'hints' for user instruction -->
+<input type="text" name="username" placeholder="Username">
+	<!-- this input box has a password mask for characters typed -->
+<input type="password" name="password" placeholder="Password">
+	<!-- i thought this was strange but a submit button is also an input instead of button. value is the text displayed -->
+<input type="submit" value="Sign In">
+</form>
+
+<p style="text-align: center;">
+<% if (locals.userid) { %>
+Welcome <%= firstname %>! <a href="/dashboard">Dashboard</a> | <a href="/logout">Logout</a>
+    <script type="text/javascript">
+    document.getElementById('formlogin').style.display = 'none';
+	</script>
+	<div class="navmembers">
+		<% include ../partials/navmembers %>
+	</div>
+<% } %>
+<p>

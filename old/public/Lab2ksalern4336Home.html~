@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/08/15
+* Date completed: 10/22/15
+*************************************
+* Program Explanation
+* This is the first HTML page for the lab. I used my Fraternity chapter due to us needing one, this
+* will be the home page with our calendar, events, and any news.
+*************************************
+-->
+
+<!-- the header block, which contains our links to our style sheet and favicon -->
+<head>
+	<title>
+		Home - Phi Sigma Kappa Chi Tetarton
+	</title>
+	<!-- a favicon to display in the tab -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="Lab2ksalern4336.css" type="text/css" rel="stylesheet">
+	
+	<script>
+	function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+	function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
+}
+	</script>
+</head>
+
+<!-- the body of the document. everything can be found in here -->
+<body>
+	<!-- our wrapper contains everything we want minus the body for background -->
+	<div class="wrapper">
+	
+	<!-- header div, contains the logo as a background -->
+	<header>
+	<!-- <img class="logo" src="crest.png"> -->
+	
+	<div class="letters" id="top">
+	<h1>&#934;  &#931;  &#922;</h1>
+	<h2>Phi Sigma Kappa<br>Western Michigan University</h2>
+	</div>
+
+	
+	<!-- this didn't have to be in it's own div, but due to how it was set up before it stayed this way. -->
+	
+	<!--	
+	<div class="banner">
+	<h1>Phi Sigma Kappa</h1>
+	<h2>Chi Tetarton - Western Michigan University</h2>
+	</div>
+		-->
+		
+	</header>
+	
+	
+	
+
+	<!-- the main nav. contains links to other parts of website -->
+	<nav>
+		<ul>
+			<li>
+			<a href="Lab2ksalern4336Home.html">Home</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Brothers.html">Brothers</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336History.html">History</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Join.html">Join</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Contact.html">Contact</a>
+			</li>
+			
+			<li>
+			<a href="lab3.pdf"  target="_blank">Lab Requirements</a>			
+			</li>		
+		</ul>
+	</nav>
+	
+	<script type="text/javascript">
+	function checkLogin(form){
+		if (form.user.value=="test")	{
+			if (form.pass.value=="1234"){
+				location="Lab2ksalern4336Join.html";					
+				alert("Success!");		
+			}
+			else {
+			alert("invalid pass!");
+			}
+		
+		}
+		else {
+		alert("invalid user!");
+		}
+	}
+	</script>
+	
+	<!-- the login box on left. only for looks currently -->
+	<div class="widget side login">
+	<h1>Login</h1>
+	<!-- a form, which executes a test.asp when submitted -->
+	<form name="login">
+	<!-- input boxes, which have placeholders to display 'hints' for user instruction -->
+	<input type="text" name="user" placeholder="Username">
+	<!-- this input box has a password mask for characters typed -->
+	<input type="password" name="pass" placeholder="Password">
+	<!-- i thought this was strange but a submit button is also an input instead of button. value is the text displayed -->
+	<input type="submit" onclick="checkLogin(this.form)" value="Sign In">
+	</form>
+	</div>
+	
+		
+	<!-- social media side div -->
+	<div class="widget side social">
+	<h1>Social Media</h1>
+	<!-- a table to ensure proper display on each device. might have been accomplished another way without table -->
+		<table class="social-media">
+		<!-- a table row -->
+			<tr>
+			<!-- a table cell -->
+				<td>
+				<!-- the anchor link to our instagram -->
+				<a href="https://instagram.com/wmuphisigs/">
+				<!-- an image of instagram icon -->
+				<img class="social-icon"  src="instagram.png" alt="instagram">
+				</a>
+				
+				<!-- the anchor link to our facebook -->
+				<a href="https://www.facebook.com/wmuPhiSigs">
+				<!-- the image of facebook logo -->
+				<img class="social-icon" src="facebook.png" alt="facebook">
+				</a>
+				<!-- anchor link to our twitter -->
+				<a href="https://twitter.com/PhiSigsWMU">
+				<!-- image of twitter logo -->
+				<img class="social-icon" src="twitter.png" alt="twitter">
+				</a>
+		
+				</td>		
+			</tr>
+			
+			<!-- a new table row -->
+			<tr>
+			<!-- table cell with a class to select from in CSS -->
+			<td class="twitter">
+			
+			<!-- this was a widget taken directly from twitter.com for display of recent tweets on our account.
+			I did not write this script. Final website purposes, I don't take credit for! -->
+			<a class="twitter-timeline" href="https://twitter.com/PhiSigsWMU" data-widget-id="657278533606227969">Tweets by @PhiSigsWMU</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
+			</td>
+			</tr>		
+		</table>
+	</div>
+
+
+
+	
+	<!--
+	<div class="side-nav">
+			<ul>
+			<li>
+			<a href="Lab2ksalern4336Primary.html">Primary Page</a>
+			</li>
+			
+			<li>
+			<a href="Lab2ksalern4336Secondary.html">Secondary Page</a>
+			</li>
+			
+			<li>
+			<a href="lab2.pdf">Lab Requirements</a>			
+			</li>		
+		</ul>
+		
+	</div>
+	-->
+	
+	<!-- a wrapper of sorts for our content after all floating side divs are positioned -->
+	<div class="content">
+	
+	<!-- another div to help sort the widgets/side events -->
+	<div class="section">
+	
+	<!-- a floated side nav to show our chapters events -->
+		<div class="widget side events">
+		<h1>Events</h1>
+		<!-- this div was the solution to auto-sizing the google iframe -->
+		<div class="responsive-iframe-container-events">
+		<!-- an iframe object from google to show our events in agenda view -->
+				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=360&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=wmuphisigs%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="194" height="360" frameborder="0" scrolling="no"></iframe>
+			</div>
+				</div>
+
+		<!-- a div that contains website content, our normal 'widget' -->
+		<div class="widget">
+			<h1>Halloween Approaches</h1>
+				<p>Are you excited for Halloween? The pumpkin carving contest
+		was a grand success. The pumpkins looked great and the AXiD's looked even better. What is your favorite pumpkin design?</p>
+		
+		</div>
+		
+		<!-- same as above -->
+		<div class="widget">
+			<h1>Happy Homecoming</h1>
+			<p>Hello Broncos, wishing everyone a happy Homecoming weekend! All sorts of Homecoming events will happen this
+			weekend at Western Michigan University. Be sure to go to some of these Homecoming events.
+			 We will be selling widgets for $0.25 each. Hope to see everyone there!</p>		
+		</div>
+		
+	
+		
+	</div>
+
+
+		<!-- another div with a calendar class to clear the floated events object -->
+		<div class="widget calendar">
+			<h1>Calendar</h1>
+			<!-- another div to autosize the iframe -->
+			<div class="responsive-iframe-container big-container">
+			<!-- another google iframe to display calendar -->
+			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=wmuphisigs%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
+		</div>
+	
+	
+	<!-- An unused table
+	<table id="mytable">
+	<tr>
+	<td>
+	1	
+	</td>
+	<td>
+	2
+	</td>	
+	</tr>	
+	</table>
+	-->
+	
+	
+	</div>
+
+	
+	<!-- our footer element, to be displayed at the bottom of every page -->
+	<footer>
+		<p>
+		<!-- a span to explicitly select our footer nav elements -->
+			<span class="footnav">
+			<a href="#top">Top</a> | <!-- a simple text separator -->
+			<a href="Lab2ksalern4336Secondary.html">Contact</a> |
+			<!-- this is a dead link, just for looks! -->
+			<a href="Lab2ksalern4336.css">Alumni</a>
+			</span>
+		<br>
+		<!-- copy character to display the copywrite logo -->
+		Copyright &copy; Phi Sigma Kappa Fraternity
+		<br>
+		Kevin Salerno
+		<br>
+		All Rights Reserved
+		</p>
+	</footer>
+
+	</div>
+</body>
+
+
+
+</html>

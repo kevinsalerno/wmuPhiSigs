@@ -1,0 +1,40 @@
+
+	<!-- a table to ensure proper display on each device. might have been accomplished another way without table -->
+		<table class="social-media">
+		<!-- a table row -->
+			<tr>
+			<!-- a table cell -->
+				<td>
+				<!-- the anchor link to our instagram -->
+				<a href="https://instagram.com/wmuphisigs/">
+				<!-- an image of instagram icon -->
+				<img class="social-icon"  src="/images/instagram.png" alt="instagram">
+				</a>
+				
+				<!-- the anchor link to our facebook -->
+				<a href="https://www.facebook.com/wmuPhiSigs">
+				<!-- the image of facebook logo -->
+				<img class="social-icon" src="/images/facebook.png" alt="facebook">
+				</a>
+				<!-- anchor link to our twitter -->
+				<a href="https://twitter.com/PhiSigsWMU">
+				<!-- image of twitter logo -->
+				<img class="social-icon" src="/images/twitter.png" alt="twitter">
+				</a>
+		
+				</td>		
+			</tr>
+			
+			<!-- a new table row -->
+			<tr>
+			<!-- table cell with a class to select from in CSS -->
+			<td class="twitter hidden-sm hidden-xs">
+			
+			<!-- this was a widget taken directly from twitter.com for display of recent tweets on our account.
+			I did not write this script. Final website purposes, I don't take credit for! -->
+			<a class="twitter-timeline" href="https://twitter.com/PhiSigsWMU" data-widget-id="657278533606227969">Tweets by @PhiSigsWMU</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
+			</td>
+			</tr>		
+		</table>
+</div>

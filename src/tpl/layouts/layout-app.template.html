@@ -1,0 +1,571 @@
+<header>
+  <div class="letters" id="top">
+  <h1>&#934;  &#931;  &#922;</h1>
+  <h2>Phi Sigma Kappa<br>Western Michigan University</h2>
+  </div>
+</header>
+<div id="header" class="row"></div>
+<div id="content" class="row"></div>
+<div id="footer" class="row"></div>
+
+<script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     //js.src = "//connect.facebook.net/en_US/sdk/debug.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '932202710217028',
+      xfbml      : true,
+      version    : 'v2.5',
+      status     : true,
+      cookie     : true
+    });
+
+
+        FB.getLoginStatus(function (response) {
+          console.log('FB resp:', response, response.status);
+          /* Bind event handler only after Facebook SDK had a nice cup of coffee */
+        });
+
+        window.activeSession.trigger("FBloaded");
+  };
+  </script>
+   <div id="fb-root"></div>
+
+   <style>/*
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/22/15
+* Date completed: 10/08/15
+*************************************
+* Program Explanation
+* This is the site style sheet. I used a colorscheme determined by the http://paletton.com/
+* and using our Fraternity colors (Cardinal Red, Silver, Gold).
+*/
+
+/* the background of the webpage */ 
+body{
+background-color: #852323;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+@media handheld, screen and (max-device-width: 768px), (max-width: 768px) {
+    .twitter{
+    display: none;
+    }
+    
+    .calendar{
+    display:none;
+    }
+
+    body{
+      padding-top: 70px;
+    }
+}
+
+
+/* a wrapper for all of our content */
+.wrapper{
+/* a border radius to give a smooth edge */
+border-radius:15px;
+background-color: #2E2E2E;
+/* margins left/right are auto to center the wrapper */
+padding: 0;
+/* take up 90% of the page, to be dynamic and still show our background color of body */
+width:90%;
+/* a shadow to give a glow effect */
+box-shadow: 0px 2px 10px;
+}
+
+#status a:hover{
+  text-decoration: none;
+}
+
+
+.profile:nth-child(even) {background: #CCC}
+.profile:nth-child(odd) {background: #FFF}
+
+
+/* header div to display at top of each page */
+header{
+
+/* i used a relative position to follow parent and for header to be able to be positioned absolute */
+position: relative;
+/* take up 100% of the wrapper */
+width: 100%;
+/* clear the background image and give a small margin */
+height: 235px;
+min-height: max-content;
+max-height: 100%;
+/*
+background-color:#9D2A2A; #852323 #2E2E2E
+*/
+/* display our crest logo once and positioned to the left, have a linear gradient for the rest of background */
+/*
+background: url(crest.png) 35px 10px no-repeat, linear-gradient(#852323, #9D2A2A, #9D2A2A, #2E2E2E);
+*/
+/* round the top to give a smooth look */
+background:linear-gradient(#852323, #9D2A2A, #9D2A2A, #2E2E2E);
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+
+/* a gold border on bottom to give a nice look */
+border-bottom: 3px ridge #fed62b;
+}
+/*
+{
+opacity: .7;
+background-image: url(crest.png);
+background-position: center;
+background-repeat: no-repeat;
+}
+*/
+header .letters:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url('crest.png');
+    background-position: center;
+  background-repeat: no-repeat;
+   opacity: 0.5;
+}
+
+/*
+.content .widget img{
+  padding: 10px;
+  max-width: 100%;
+  margin: 0 10px 0 10px;
+}
+*/
+
+
+header .letters {
+position: absolute;
+left: 0;
+right: 0;
+margin: 0;
+margin-left: auto;
+margin-right: auto;
+max-width: max-content;
+min-height: max-content;
+
+text-align: center;
+overflow: hidden;
+height: 100%;
+
+padding: 0;
+}
+
+header h2{
+position: relative;
+top: 20%;
+margin: 0;
+margin-top: -40px;
+color: #ffffff;
+}
+
+header h1{
+min-width: 4em;
+/*
+position: absolute;
+top: 20%;
+right: 40%;
+*/
+position: relative;
+border-top: 3px ridge #cccccc;
+border-bottom: 3px ridge #cccccc;
+font-size: 4em;
+color: #ffffff;
+text-shadow: 1px 1px 5px red;
+}
+/* the header h1/h2 elements */
+
+/*
+header h1, h2{
+
+margin-top: 0em;
+margin-bottom: 0em;
+
+color: #D6D6D6;
+font-family: Minion Pro, sans-serif;
+
+
+text-align: center;
+font-size: 1em;
+position: absolute;
+top: 60%;
+right: 40%;
+}
+*/
+
+/* the banner div to position the h1/h2 objects correctly */
+/*
+header .banner {
+position: absolute;
+bottom: 10px;
+left: 210px;
+}
+*/
+
+/* old style of showing the logo, obsolete
+header .logo {
+float: left;
+margin-left: 5px;
+margin-top: 5px;
+height: 215px;
+width: 180px;
+}
+*/
+
+/*
+height: 215px;
+width: 180px;
+*/
+
+/* our navigation, float to left */
+.navdesktop{
+/* align text in center */
+text-align: center;
+border: 3px ridge #852323;
+box-shadow: 0px 0px 5px grey;
+margin-top: 10px;
+}
+
+/*
+.sideleft {
+  margin: 0 0 10px 0;
+}
+*/
+
+/*
+nav{
+position: relative;
+width: 100%;
+top:0;
+background-color:#A0A0A0;
+}
+*/
+
+.navdesktop ul{
+  /* remove the underline*/
+list-style-type:none;
+  /* minimal spacing */
+padding:0;
+margin:0;
+}
+
+.navdesktop li{
+/* a small border to differentiate buttons*/
+border-bottom: 2px solid #292929;
+
+background-color:#A0A0A0;
+opacity: .7;
+border-radius: 30px;
+/* a font size that will scale with devices */
+font-size: 1.25em;
+/*
+display:inline;
+*/
+}
+
+.navdesktop li a{
+  padding: .25em;
+  /* treat as a block instead of just the text. user can click anywhere in li */
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.navdesktop li a:hover {
+  /* give a responsive look to lighten the gray when hovering */
+background-color: #BBBBBB;
+border-radius: 30px;
+}
+
+
+
+
+/*
+h1 {
+height: 100px;
+width: 30%;
+text-align: center;
+color: white;
+background-image: url(Beach.jpg);
+}
+*/
+nav{
+  text-align: center;
+}
+
+.content{
+  margin: -10px 0 0 0;
+}
+
+/* clear the events floated div */
+
+
+/* center the images in the social media div */
+table.social-media tr td{
+text-align: center;
+padding: 0;
+}
+
+/* remove the underline from anchors */
+table.social-media tr td a{
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+/*.no-gutter > [class*='col-'] { */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.widget.social a{
+    margin: 0;
+  }
+
+/* set to 30% of parent cell */
+.social-icon{
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+/* responsive hover setting to highlight the icon */
+.social-icon:hover{
+opacity: 0.8;
+}
+
+/* set the tiwtter object to follow 100% of parent */
+.twitter{
+max-width: 100%;
+}
+
+
+.widget.side h1{
+font-size: 1.10em;
+}
+
+/* clear default spacing */
+.widget.side.login form{
+  margin: 0;
+  padding: 0em;
+}
+
+/* made login inputs 80% of parent and center */
+.widget.side.login input{
+width: 80%;
+display:block;
+margin: 5px auto 5px auto;
+}
+
+/* the submit button. set to 50% of parent, give some padding to 'fatten' it up, and a rounded radius. 
+shadow/border for fancier look */
+.widget.side.login input[type=submit]{
+width: 50%;
+padding: 2px;
+background-color:#cccccc;
+box-shadow: 0px 0px 5px;
+border-radius: 5px;
+border: 1px solid #000000
+}
+
+/* a standard widget. the style is consistent throughout site. I used colors that mixed well with our body/wrapper background 
+a shadow for a nice glow look*/
+.widget {
+margin: 10px 0 10px 0;
+background-color: #F5F3F3;
+border: 3px solid #852323;
+box-shadow: 0px 0px 5px grey;
+
+overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* selecting the 2 widgets in the content section, respect the events size via margin */
+
+
+/* using columns to split up text. had issues with images */
+
+
+
+
+/* make table fill the content div container, center images */
+.widget.gallery table {
+width: 100%;
+text-align: center;
+}
+
+/* size each cell */
+.widget.gallery tr td{
+width: 33%;
+height: auto;
+}
+
+/* remove anchor underline */
+.widget.gallery td td a{
+text-decoration: none;
+}
+
+/* resize each img in table to 100px */
+.widget.gallery tr td img{
+width: 100px;
+height: 100px;
+}
+
+/* the red top of each widget */
+.widget h1{
+font-size: 1.25em;
+margin: 0em;
+color: #fff;
+padding: .1em;
+background-color: #9D2A2A;
+}
+
+/* i don't think I use this anymore but nav might inherit widget someday */
+.widget ul{
+padding: 0;
+list-style-type: none;
+}
+
+/* anchor links inside widgets */
+.widget a {
+margin: .5em;
+color: #792020;
+}
+
+/* the color change of links for responsive feedback, a lighter red */
+.widget a:hover{
+color: #280B0B;
+}
+
+/* i decided i like links to be consistent whether they are visited or not
+.widget a:visited{
+color: #4D4D4D;
+}
+*/
+
+/* change the font color of our widgets and set to a smaller font */
+.widget p{
+color: #303030;
+margin: .5em;
+}
+
+
+/* our footer div. clear both floats to ensure the wrapper actually stretches out in absence of much content. */
+footer{
+/* rounded bottom for a smooth look */
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+background-color:#9D2A2A;
+color:#000000;
+margin-bottom: -10px;
+text-align: center;
+}
+
+
+/* anchor links in footer */
+footer a{
+color:#B5B5B5;
+text-decoration:underline;
+}
+
+/* responsive hover color change for links in footer */
+footer .footnav a:hover {
+color:#1A1A1A;
+}
+
+/* if the user visited a link already, change to this color in footer */
+footer a:visited{
+color:#9C9C9C;
+}
+
+.navmembers {
+  margin-bottom: -8px;
+  text-align: center;
+}
+
+.navmembers ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+.navmembers li {
+  font-size: 1.1em;
+  background-color: #ccc;
+}
+
+.navmembers li a{
+  padding: .25em;
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* I DID NOT WRITE MOST OF THIS CODE BELOW, BUT WILL WRITE TO MY BEST UNDERSTANDING.
+This was used to display the responsive iframe to change in size - as google originally only gave a fixed size. */
+
+/* @media is meant for differentiating which type of device is viewing the page and also
+how big the current window is. good for responsive sites */
+/* if the page becomes too small, don't show the calendar. */
+
+
+/* Responsive iFrame for calendar */
+.responsive-iframe-container {
+  /* relative positioning to respect parent */
+    position: relative;
+    /* not sure about this magic number for padding, but goofs up if taken away */
+    padding-bottom: 56.25%;
+    /* same for padding top */
+    padding-top: 30px;
+    /* height is determined below in iframe selector */
+    height: 0;
+    overflow: hidden;
+}
+
+/* this was modified for events. position is still relative and height is inherited by the side-events div(absolute) */
+.responsive-iframe-container-events {
+    position: relative;
+    height: inherit;
+}
+
+/* the iframe selector themselves, which are absolutely positioned in relative parent, start at the very top left edge
+and fill the entire parent container - which resizes our iframe object */
+.responsive-iframe-container iframe,
+.responsive-iframe-container-events iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.follow-btn{
+  text-align: center;
+}</style>
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/08/15
+* Date completed: 10/22/15
+*************************************
+* Program Explanation
+* This is the first HTML page for the lab. I used my Fraternity chapter due to us needing one, this
+* will be the home page with our calendar, events, and any news.
+*************************************
+-->
+
+<!-- the header block, which contains our links to our style sheet and favicon -->
+<head>
+    <% include partials/head %>
+</head>
+
+<!-- the body of the document. everything can be found in here -->
+<body>
+	<!-- our wrapper contains everything we want minus the body for background -->
+	<div class="wrapper container-fluid">
+	
+	<!-- header div, contains the logo as a background -->
+	<header>
+		<% include partials/header %>
+	</header>
+	
+	
+	
+
+	<!-- the main nav. contains links to other parts of website -->
+	<nav>
+		<% include partials/nav %>
+	</nav>
+	
+	
+	<!--
+	<script type="text/javascript">
+	function checkLogin(form){
+		if (form.user.value=="test")	{
+			if (form.pass.value=="1234"){
+				location="Lab2ksalern4336Join.html";					
+				alert("Success!");		
+			}
+			else {
+			alert("invalid pass!");
+			}
+		
+		}
+		else {
+		alert("invalid user!");
+		}
+	}
+	</script>
+	-->
+	
+	
+	<!-- the login box on left. only for looks currently -->
+	<div class="widget side login">
+		<% include partials/login %>
+	</div>
+	
+		
+	<!-- social media side div -->
+	<div class="widget side social">
+		<% include partials/socialmedia %>
+	</div>
+	
+	<!-- a wrapper of sorts for our content after all floating side divs are positioned -->
+	<div class="content">
+	
+	<!-- another div to help sort the widgets/side events -->
+	<div class="section">
+	
+	<!-- a floated side nav to show our chapters events -->
+		<div class="widget side events">
+		<% include partials/events %>
+				</div>
+
+		<!-- a div that contains website content, our normal 'widget' -->
+		<div class="widget">
+			<h1>Halloween Approaches</h1>
+				<p>Are you excited for Halloween? The pumpkin carving contest
+		was a grand success. The pumpkins looked great and the AXiD's looked even better. What is your favorite pumpkin design?</p>
+		
+		</div>
+		
+		<!-- same as above -->
+		<div class="widget">
+			<h1>Happy Homecoming</h1>
+			<p>Hello Broncos, wishing everyone a happy Homecoming weekend! All sorts of Homecoming events will happen this
+			weekend at Western Michigan University. Be sure to go to some of these Homecoming events.
+			 We will be selling widgets for $0.25 each. Hope to see everyone there!</p>		
+		</div>
+		
+	
+		
+	</div>
+
+
+		<!-- another div with a calendar class to clear the floated events object -->
+		<div class="widget calendar">
+					<% include partials/calendar %>
+		</div>
+	
+	
+	<!-- An unused table
+	<table id="mytable">
+	<tr>
+	<td>
+	1	
+	</td>
+	<td>
+	2
+	</td>	
+	</tr>	
+	</table>
+	-->
+	
+	
+	</div>
+
+	
+	<!-- our footer element, to be displayed at the bottom of every page -->
+	<footer>
+		<% include partials/footer %>
+	</footer>
+
+	</div>
+	<% include partials/bootstrap %>
+</body>
+
+
+
+</html>

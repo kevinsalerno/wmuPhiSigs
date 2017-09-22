@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^wmuPhiSigs.org [NC]
+RewriteRule ^(.*)$ http://www.wmuPhiSigs.com/$1 [L,R=301]

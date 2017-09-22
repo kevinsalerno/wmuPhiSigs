@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+*************************************
+* Programmer: Kevin Salerno
+* Class ID: ksalern4336
+* Lab2
+* CIS 3900: Business Web Architecture
+* Fall 2015
+* Due date: 10/08/15
+* Date completed: 10/22/15
+*************************************
+* Program Explanation
+* This is the first HTML page for the lab. I used my Fraternity chapter due to us needing one, this
+* will be the home page with our calendar, events, and any news.
+*************************************
+-->
+
+<!-- the header block, which contains our links to our style sheet and favicon -->
+<head>
+    <% include ../partials/head %>
+</head>
+
+<!-- the body of the document. everything can be found in here -->
+<body>
+
+	<!-- our wrapper contains everything we want minus the body for background -->
+	<div class="wrapper container-fluid center-block">
+	
+	<!-- header div, contains the logo as a background -->
+		<div class="row">
+					<div class="col-md-12">
+	<header>
+		<% include ../partials/header %>
+	</header>
+</div>
+</div>
+	
+	
+			<div class="row container-fluid">
+	
+	<!-- a wrapper of sorts for our content after all floating side divs are positioned -->
+	<div class="content">
+
+	<div class="col-md-9 col-md-push-3">
+	<!-- a div with a class to select our gallery widget -->
+	<div class="widget">
+		<h1>Members</h1>
+		<% include ../partials/status %>
+		<!-- c -->
+		<% var maillist = ''; %>
+		<% for (var i = 0; i < locals.members.length; i++){ %>
+		<%	maillist = maillist + members[i].Email + '; '; %>
+		<% } %>
+		<p><a class="btn btn-success" href="/dashboard/members/create"><span class="glyphicon glyphicon-plus"></span></a> <a class="btn btn-warning" href="mailto:<%= maillist %>"><span class="glyphicon glyphicon-envelope"></span></a></p>
+		<div class="row hidden-xs hidden-sm">
+			<div class="col-md-1"><strong>Pin</strong></div>
+			<div class="col-md-1"><strong>FirstName</strong></div>
+			<div class="col-md-2"><strong>LastName</strong></div>
+			<div class="col-md-3"><strong>Email</strong></div>
+			<div class="col-md-2"><strong>Username</strong></div>
+			<div class="col-md-1"><strong>Status</strong></div>
+			<div class="col-md-1"><strong>Eboard</strong></div>
+			<div class="col-md-1"><strong>Chair</strong></div>
+		</div>
+		<% for (var i = 0; i < locals.members.length; i++){ %>
+			<div class="row profile">
+			<div class="col-xs-5 col-sm-5 col-md-1 col-md-push-1"><span class="hidden-md hidden-lg"><strong>First Name: </strong></span><%= members[i].FirstName %></div>
+			<div class="col-xs-5 col-sm-5 col-md-2 col-md-push-1"><span class="hidden-md hidden-lg"><strong>Last Name: </strong></span><%= members[i].LastName %></div>
+			<div class="col-xs-2 col-sm-2 col-md-1 col-md-pull-3"><span class="hidden-md hidden-lg"><strong>Pin: </strong></span>#<%= members[i].Pin %> </div>
+			<div class="col-xs-12 col-sm-12 col-md-3"><span class="hidden-md hidden-lg"><strong>Email: </strong></span><a href="mailto:<%= members[i].Email %>"><%= members[i].Email %></a></div>
+			<div class="col-xs-6 col-sm-6 col-md-2"><span class="hidden-md hidden-lg"><strong>Username: </strong></span><%= members[i].Username %></div>
+			<div class="col-xs-6 col-sm-6 col-md-1"><span class="hidden-md hidden-lg"><strong>Status: </strong></span><%= members[i].Status %></div>
+			<div class="col-xs-6 col-sm-6 col-md-1"><span class="hidden-md hidden-lg"><strong>Eboard: </strong></span><%= members[i].Eboard %></div>
+			<div class="col-xs-6 col-sm-6 col-md-1"><span class="hidden-md hidden-lg"><strong>Chair: </strong></span><%= members[i].Chair %></div>
+			</div>
+		<% } %>
+	</div>
+
+</div>
+
+
+<div class="col-md-3 sideleft col-md-pull-9">
+
+	<!-- the main nav. contains links to other parts of website -->
+	<nav>
+		<% include ../partials/nav %>
+	</nav>
+
+
+	<!-- the login box on left. only for looks currently -->
+	<div class="widget side login">
+		<% include ../partials/login %>
+	</div>
+	
+		
+	<!-- social media side div -->
+	<div class="widget side social">
+		<% include ../partials/socialmedia %>
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+	<!-- our footer element, to be displayed at the bottom of every page -->
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</div>
+</div>
+
+	<% include ../partials/bootstrap %>
+</body>
+
+
+
+</html>
