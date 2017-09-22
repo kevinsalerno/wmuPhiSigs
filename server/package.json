@@ -1,0 +1,58 @@
+{
+  "name": "wmuPhiSigs",
+  "version": "1.0.1",
+  "description": "WMU Phi Sigma Kappa - Chi Tetarton",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift",
+    "wmuPhiSigs",
+    "western michigan university",
+    "phi sigs",
+    "phi sig",
+    "phi sigma kappa",
+    "wmu"
+  ],
+  "author": {
+    "name": "Kevin Salerno",
+    "email": "kevinxsalerno@gmail.org",
+    "url": "http://www.wmuPhiSigs.org"
+  },
+  "homepage": "http://www.wmuPhiSigs.org/",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramr/nodejs-custom-version-openshift"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "1.1.0",
+    "cookie-parser": "^1.4.1",
+    "cookieparser": "^0.1.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "flash": "^1.1.0",
+    "fs": "0.0.2",
+    "logger": "0.0.1",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook-token": "^3.2.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "express-session": "*",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}
